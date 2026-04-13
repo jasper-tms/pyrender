@@ -4,7 +4,8 @@
 [![PyPI version](https://badge.fury.io/py/pyrender2.svg)](https://badge.fury.io/py/pyrender2)
 [![Downloads](https://pepy.tech/badge/pyrender2)](https://pepy.tech/project/pyrender2)
 
-> **Note:** This is a fork of [pyrender](https://github.com/mmatl/pyrender) by Matthew Matl, updated for compatibility with numpy v2. Install via `pip install pyrender2`, but you still `import pyrender`, meaning your existing python code will just work if you switch to this fork.
+> [!NOTE]
+> This is a fork of [pyrender](https://github.com/mmatl/pyrender) by Matthew Matl, updated for compatibility with numpy v2. Install via `pip install pyrender2`, but you still `import pyrender`, meaning your existing python code will just work if you switch to this fork (`pip uninstall pyrender` -> `pip install pyrender2`).
 
 Pyrender is a pure Python 3 library for physically-based rendering and visualization.
 It is designed to meet the [glTF 2.0 specification from Khronos](https://www.khronos.org/gltf/).
