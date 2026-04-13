@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'pyproject.toml'
+      - 'pyrender/version.py'
 
 jobs:
   build-and-publish:
