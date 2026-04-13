@@ -7,15 +7,13 @@ Author: Matthew Matl
 """
 import abc
 import numpy as np
-import six
 
 from .constants import TexFlags
 from .utils import format_color_vector, format_texture_source
 from .texture import Texture
 
 
-@six.add_metaclass(abc.ABCMeta)
-class Material(object):
+class Material(metaclass=abc.ABCMeta):
     """Base for standard glTF 2.0 materials.
 
     Parameters

@@ -1,0 +1,60 @@
+# Originally authored by Matthew Matl.
+# Adapted for compatibility with numpy v2 by Jasper Phelps <jasper.s.phelps@gmail.com>
+
+[build-system]
+requires = ['setuptools', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'pyrender2'
+dynamic = ['version']
+description = 'Easy-to-use Python renderer for 3D visualization'
+readme = {file = 'README.md', content-type = 'text/markdown'}
+requires-python = '>=3.6'
+license = {file = 'LICENSE'}
+keywords = ['rendering', 'graphics', 'opengl', '3d', 'visualization', 'pbr', 'gltf']
+authors = [{name = 'Matthew Matl', email = 'matthewcmatl@gmail.com'}]
+maintainers = [{name = 'Jasper Phelps', email = 'jasper.s.phelps@gmail.com'}]
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: MacOS :: MacOS X',
+    'Programming Language :: Python :: 3',
+    'Natural Language :: English',
+    'Topic :: Scientific/Engineering',
+]
+urls = {Repository = 'https://github.com/jasper-tms/pyrender'}
+dependencies = [
+    'freetype-py',
+    'imageio',
+    'networkx',
+    'numpy',
+    'Pillow',
+    'pyglet',
+    'PyOpenGL>=3.1.9',
+    'trimesh',
+]
+
+[project.optional-dependencies]
+dev = [
+    'flake8',
+    'pre-commit',
+    'pytest',
+    'pytest-cov',
+    'tox',
+]
+docs = [
+    'sphinx',
+    'sphinx_rtd_theme',
+    'sphinx-automodapi',
+]
+
+[tool.setuptools.dynamic]
+version = {attr = 'pyrender.version.__version__'}
+
+[tool.setuptools.packages.find]
+include = ['pyrender', 'pyrender.*']
+
+[tool.setuptools.package-data]
+pyrender = ['fonts/*', 'shaders/*']
